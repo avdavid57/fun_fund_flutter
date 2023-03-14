@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'components/main_top_section.dart';
+import 'screens/main_screen.dart';
+import 'components/main_menu_bar.dart';
 
 void main() {
   runApp(const FunFund());
@@ -15,19 +16,9 @@ class FunFund extends StatelessWidget {
       home: Scaffold(
         backgroundColor: kMainBackgroundColor,
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const MainTopSection(),
-            AppBar(
-              // TODO Complete app bar menu items
-              title: const Text('THIS IS THE APPBAR'),
-              backgroundColor: kMenuBarBackgroundColor,
-            ),
-            Column(
-              children: const [
-                Text('THIS IS THE BOTTOM SECTION'),
-              ],
-            ),
+          children: const [
+            MainScreen(),
+            MainMenuBar(),
           ],
         ),
       ),
